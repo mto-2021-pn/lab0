@@ -9,8 +9,8 @@ public class TailsGenerator {
     ArrayList<String> list = new ArrayList<>();
     int counter = value.length();
 
-    for (int i=0; i<counter+1; i++) {
-      if (i==0) {
+    for (int i = 0; i < counter + 1; i++) {
+      if (i == 0) {
         list.add(value);
       } else {
         list.add("");
