@@ -6,7 +6,13 @@ import java.util.List;
 public class TailsGenerator {
 
     public List<String> tails(String value) {
-        return new ArrayList<>(value.length());
+        // stworzona nowa lista slow i dodano po koleji stringi do tej nowej listy, ostatni string jest pusty
+        List<String> returnListOfStrings = new ArrayList<String>();
+        for(int i=0; i<=value.length(); i++){
+            returnListOfStrings.add(value.substring(i, value.length()));
+        }
+
+        return returnListOfStrings;
     }
 
 }
