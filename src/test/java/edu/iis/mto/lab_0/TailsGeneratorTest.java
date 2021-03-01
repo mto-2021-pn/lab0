@@ -14,27 +14,23 @@ class TailsGeneratorTest {
     private TailsGenerator tailsGenerator;
     private List<String> tails;
 
-    @BeforeEach
-    void setup() {
+    @BeforeEach void setup() {
 
         tailsGenerator = new TailsGenerator();
         tails = tailsGenerator.tails(HELLO);
     }
 
-    @Test
-    void tailsShouldReturnListOfStringsOfSizeEqualsToInputStringLengthPlusOne() {
+    @Test void tailsShouldReturnListOfStringsOfSizeEqualsToInputStringLengthPlusOne() {
 
         assertThat(tails, Matchers.hasSize(HELLO.length() + 1));
     }
 
-    @Test
-    void tailsShouldReturnFullStringAsFirstElement() {
+    @Test void tailsShouldReturnFullStringAsFirstElement() {
 
         assertThat(tails.get(0), Matchers.equalTo(HELLO));
     }
 
-    @Test
-    void tailsShouldReturnEmptyStringAsLastElement() {
+    @Test void tailsShouldReturnEmptyStringAsLastElement() {
 
         assertThat(tails.get(tails.size() - 1), Matchers.equalTo(""));
     }
